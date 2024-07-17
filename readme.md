@@ -1,5 +1,7 @@
-core - standalone connection module, for users wanting lightweight install for custom script development
+Control of the Syringe pump of for Metabolic Analysis using the JOBST Sensor
+Steps -
+1. Determine which com port the device is connected to
+2. Set up all of the parameters neccessary to run 
+3. Run it on the device
+Will later integrate other processes like the data reading and timing to actively modify the analysis for automation 
 
-CHEMYX_python - contains templates and GUI for control of standard pumps
-
-CHEMYX_python_dualchannel - contains templates and GUI for control of dualchannel-enabled pumps, such as the 4000-X

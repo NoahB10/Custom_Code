@@ -56,6 +56,7 @@ def COM_Test(ports):
                             line = line.strip('\r')
                             response_list.append(line)
                         break
+                    # Might want to add an if statement to compare the response with what is expected of the machine (so that it doesnt connect to a dif machine)
                     return 1   
             except serial.SerialTimeoutException as e:
                 return 0
@@ -148,7 +149,8 @@ class Connection(object):
         """
         if self.multipump and command[:3]=='set':
             command=self.addPump(command)
-        print(command)
+        if command !='elapsed time':
+            print(command)
         try:
             arg = bytes(str(command), 'utf8') + b'\r'
             self.ser.write(arg)
