@@ -35,10 +35,10 @@ if __name__=='__main__':
     """
 
     #For running sequential pumping rates:
-    volume=[200,100,150]   # Buffer then Standard then air  
+    volume=[100,200,200,200,150]   # Buffer then Standard then air  
     volume = [direction*volume[ii] for ii in range(len(volume))] # Update the direction for each pump. Can make direction an array if need to switch direction
-    delay=[0.3,0.3,0.3]               # Delay in minutes
-    rate=[50,30,50]         # rates for each of the sequential actions
+    delay=[0.12,0.12,0.12,0.12]               # Delay in minutes
+    rate=[50,40,100,40,100]         # rates for each of the sequential actions
     runtime= [direction*volume[ii]/rate[ii] for ii in range(len(rate))] # this is calculated implictly by pump
 
     """
